@@ -372,7 +372,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -403,10 +403,10 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9bc4cc9b488e3ca4da40e17c5c97fabc, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -1032620788, guid: b5998c75e13799543823ecf953d6b111, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1032620788, guid: b5998c75e13799543823ecf953d6b111, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1197633206, guid: b5998c75e13799543823ecf953d6b111, type: 3}
   - m_RefCount: 3
@@ -1458,6 +1458,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1525440429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525440431}
+  - component: {fileID: 1525440430}
+  m_Layer: 0
+  m_Name: Minigame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1525440430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525440429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117d8ae666d785c43bd8ea8abb642ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <State>k__BackingField: 0
+  <CurrentCountDownMessage>k__BackingField: 
+  <TimeFloat>k__BackingField: 0
+  <DebugMode>k__BackingField: 0
+  <DebugGameTime>k__BackingField: 5
+  <CountDownStartMessage>k__BackingField: GO!
+  <MaxGameTime>k__BackingField: -278729886
+  <Winner>k__BackingField: 0
+  <AuthorCredits>k__BackingField:
+  - Firstname Lastname
+--- !u!4 &1525440431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525440429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.56723964, y: 0.11857541, z: 0.025795069}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029281354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1890,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 898136882}
+  - {fileID: 1525440431}
   - {fileID: 857416232}
   - {fileID: 2134751089}
   - {fileID: 491508116}
