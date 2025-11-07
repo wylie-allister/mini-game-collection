@@ -7,6 +7,7 @@ public class TrainMovement : MonoBehaviour
 {
     public bool isLeftPulled = false;
     public bool isRightPulled = true;
+    public GameObject smoke;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +21,14 @@ public class TrainMovement : MonoBehaviour
         {
             isLeftPulled = true;
             isRightPulled = false;
+            smoke.SetActive(true);
         }
 
         if (ArcadeInput.Player2.Right.Pressed && isRightPulled == false)
         {
             isLeftPulled = false;
             isRightPulled = true;
+            smoke.SetActive(false);
         }
     }
 }
