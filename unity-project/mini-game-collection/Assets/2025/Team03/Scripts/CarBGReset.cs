@@ -21,7 +21,7 @@ public class CarBGReset : MonoBehaviour
     {
         if (other.gameObject.name == "CarBGTrigger")
         {
-            transform.position = new Vector3(transform.position.x, -12.553f,transform.position.z);
+            transform.position = new Vector3(transform.position.x, -10f,transform.position.z);
         }
     }
 }
