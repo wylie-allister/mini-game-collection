@@ -8,6 +8,7 @@ public class TrainMovement : MonoBehaviour
     public bool isLeftPulled = false;
     public bool isRightPulled = true;
     public GameObject smoke;
+    public int trainScoreCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class TrainMovement : MonoBehaviour
             isLeftPulled = true;
             isRightPulled = false;
             smoke.SetActive(true);
+            trainScoreCount++;
         }
 
         if (ArcadeInput.Player2.Right.Pressed && isRightPulled == false)
@@ -29,6 +31,7 @@ public class TrainMovement : MonoBehaviour
             isLeftPulled = false;
             isRightPulled = true;
             smoke.SetActive(false);
+            trainScoreCount++;
         }
     }
 }

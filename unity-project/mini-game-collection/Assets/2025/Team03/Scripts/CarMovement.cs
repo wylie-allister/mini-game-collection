@@ -9,6 +9,7 @@ public class CarMovement : MonoBehaviour
     public bool isB2Pressed = true;
     public GameObject leftHandle;
     public GameObject rightHandle;
+    public int carScoreCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class CarMovement : MonoBehaviour
             isB2Pressed = false;
             leftHandle.SetActive(true);
             rightHandle.SetActive(false);
+            carScoreCount++;
         }
 
         if (ArcadeInput.Player1.Action2.Pressed && isB2Pressed == false)
@@ -32,6 +34,7 @@ public class CarMovement : MonoBehaviour
             isB1Pressed = false;
             leftHandle.SetActive(false);
             rightHandle.SetActive(true);
+            carScoreCount++;
         }
     }
 }
