@@ -14,6 +14,10 @@ public class CarMovement : MonoBehaviour
     public GameObject bg1;
     public GameObject bg2;
     public int carScoreCount = 0;
+    public GameObject button1;
+    public GameObject button2;
+    public GameObject button1Pressed;
+    public GameObject button2Pressed;
 
     [field: SerializeField]
     public MiniGameManager MiniGameManager { get; private set; }
@@ -37,6 +41,11 @@ public class CarMovement : MonoBehaviour
             //Faux handle animation
             leftHandle.SetActive(true);
             rightHandle.SetActive(false);
+
+            button1Pressed.SetActive(false);
+            button1.SetActive(true);
+            button2.SetActive(false);
+            button2Pressed.SetActive(true);
             //Increases score and updates UI
             carScoreCount++;
             scoreUI.IncrementPlayerScore(1);
@@ -52,6 +61,11 @@ public class CarMovement : MonoBehaviour
             isB1Pressed = false;
             leftHandle.SetActive(false);
             rightHandle.SetActive(true);
+
+            button1Pressed.SetActive(true);
+            button1.SetActive(false);
+            button2.SetActive(true);
+            button2Pressed.SetActive(false);
             carScoreCount++;
             scoreUI.IncrementPlayerScore(1);
 

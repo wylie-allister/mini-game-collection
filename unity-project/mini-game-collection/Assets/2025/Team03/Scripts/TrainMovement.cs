@@ -14,6 +14,8 @@ public class TrainMovement : MonoBehaviour
     public int trainScoreCount = 0;
     public GameObject bg1;
     public GameObject bg2;
+    public GameObject joystickLeft;
+    public GameObject joystickRight;
 
     [field: SerializeField]
     public MiniGameManager MiniGameManager { get; private set; }
@@ -35,6 +37,8 @@ public class TrainMovement : MonoBehaviour
             isLeftPulled = true;
             isRightPulled = false;
             smoke.SetActive(true);
+            joystickLeft.SetActive(false);
+            joystickRight.SetActive(true);
             trainScoreCount++;
             scoreUI.IncrementPlayerScore(2);
 
@@ -47,6 +51,8 @@ public class TrainMovement : MonoBehaviour
             isLeftPulled = false;
             isRightPulled = true;
             smoke.SetActive(false);
+            joystickLeft.SetActive(true);
+            joystickRight.SetActive(false);
             trainScoreCount++;
             scoreUI.IncrementPlayerScore(2);
 
