@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrainBGReset : MonoBehaviour
 {
+    //Allister Wylie
     // Start is called before the first frame update
     void Start()
     {

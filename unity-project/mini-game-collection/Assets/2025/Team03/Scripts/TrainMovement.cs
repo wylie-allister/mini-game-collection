@@ -6,6 +6,8 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class TrainMovement : MonoBehaviour
 {
+    //Allister Wylie
+
     public bool isLeftPulled = false;
     public bool isRightPulled = true;
     public GameObject smoke;
@@ -26,8 +28,10 @@ public class TrainMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //see car script for function notes
         if (ArcadeInput.Player2.Left.Pressed && isLeftPulled == false)
         {
+            //locks left input, unlocks right
             isLeftPulled = true;
             isRightPulled = false;
             smoke.SetActive(true);
@@ -50,7 +54,7 @@ public class TrainMovement : MonoBehaviour
             bg2.transform.position = new Vector3(bg2.transform.position.x, bg2.transform.position.y - 0.5f, bg2.transform.position.z);
         }
 
-        if (trainScoreCount == 200)
+        if (trainScoreCount >= 200)
         {
             MiniGameManager.Winner = MiniGameWinner.Player2;
             MiniGameManager.StopGame();
